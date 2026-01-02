@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-export default function Characters() {
+function CharactersContent() {
   const searchParams = useSearchParams();
   const page = searchParams.get('page') || 1;
   const [data, setData] = useState({ results: [], next: null, previous: null });
@@ -140,5 +140,17 @@ export default function Characters() {
         }
       `}</style>
     </div>
+  );
+}
+
+export default function Characters() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-[#FFE81F] text-xl animate-pulse">Loading...</div>
+      </div>
+    }>
+      <CharactersContent />
+    </Suspense>
   );
 }

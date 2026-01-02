@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-export default function Planets() {
+function PlanetsContent() {
   const searchParams = useSearchParams();
   const page = searchParams.get('page') || 1;
   const [data, setData] = useState({ results: [], next: null, previous: null });
@@ -135,5 +135,17 @@ export default function Planets() {
         }
       `}</style>
     </div>
+  );
+}
+
+export default function Planets() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-[#FFE81F] text-xl animate-pulse">Loading...</div>
+      </div>
+    }>
+      <PlanetsContent />
+    </Suspense>
   );
 }
