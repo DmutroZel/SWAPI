@@ -4,6 +4,24 @@
   <img src="https://github.com/DmytroZelenyi/SWAPI/blob/main/public/image.png?raw=true" alt="Project preview" width="600">
 </p>
 
+Three Main Exploration Modules:
+
+Characters — Explore the heroes, villains, and supporting cast of the Star Wars saga with detailed character information
+Planets — Discover new worlds across the galaxy, learn about their characteristics and significance
+Films — Watch and navigate through the complete Star Wars film saga
+Technical Stack:
+
+Built with Next.js framework and bootstrapped with create-next-app
+Frontend: JavaScript (98.5%) and CSS (1.0%)
+Fully responsive design with a dark, immersive theme matching the Star Wars aesthetic
+Deployed with 5 active production deployments
+Project Status:
+
+Actively maintained with recent updates (4 days ago)
+Public repository with clean file structure including configuration files (package.json, next.config.mjs, PostCSS configuration)
+Ready for both development and production environments
+The application features an iconic yellow-and-black interface with styled navigation cards, providing an intuitive and visually striking experience for Star Wars fans and data explorers alike.
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
